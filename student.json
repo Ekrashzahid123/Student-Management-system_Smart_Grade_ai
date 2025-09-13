@@ -1,0 +1,101 @@
+[
+    {
+        "id": "2b3c4d5e-2222-3333-4444-555566667777",
+        "name": "ali",
+        "email": "ali@gmail.com",
+        "age": 10,
+        "department": "CS",
+        "created_at": "2025-09-11T09:05:00Z",
+        "CGPA": 4
+    },
+    {
+        "id": "3c4d5e6f-3333-4444-5555-666677778888",
+        "name": "Usman Tariq",
+        "email": "usman.tariq@gmail.com",
+        "age": 23,
+        "department": "Electrical Engineering",
+        "created_at": "2025-09-11T09:10:00Z",
+        "CGPA": 2
+    },
+    {
+        "id": "4d5e6f7g-4444-5555-6666-777788889999",
+        "name": "Hina Malik",
+        "email": "hina.malik@gmail.com",
+        "age": 21,
+        "department": "Artificial Intelligence",
+        "created_at": "2025-09-11T09:15:00Z",
+        "CGPA": 3
+    },
+    {
+        "id": "5e6f7g8h-5555-6666-7777-888899990000",
+        "name": "Omar Farooq",
+        "email": "omar.farooq@gmail.com",
+        "age": 24,
+        "department": "Data Science",
+        "created_at": "2025-09-11T09:20:00Z",
+        "CGPA": 2
+    },
+    {
+        "id": "6f7g8h9i-6666-7777-8888-999900001111",
+        "name": "Fatima Zahra",
+        "email": "fatima.zahra@gmail.com",
+        "age": 22,
+        "department": "Mathematics",
+        "created_at": "2025-09-11T09:25:00Z",
+        "CGPA": 4
+    },
+    {
+        "id": "7g8h9i0j-7777-8888-9999-000011112222",
+        "name": "Bilal Hussain",
+        "email": "bilal.hussain@gmail.com",
+        "age": 25,
+        "department": "Physics",
+        "created_at": "2025-09-11T09:30:00Z",
+        "CGPA": 3
+    },
+    {
+        "id": "8h9i0j1k-8888-9999-0000-111122223333",
+        "name": "Nida Shah",
+        "email": "nida.shah@example.com",
+        "age": 20,
+        "department": "Chemistry",
+        "created_at": "2025-09-11T09:35:00Z",
+        "CGPA": 2
+    },
+    {
+        "id": "9i0j1k2l-9999-0000-1111-222233334444",
+        "name": "Ahmed Raza",
+        "email": "ahmed.raza@gmail.com",
+        "age": 23,
+        "department": "Biology",
+        "created_at": "2025-09-11T09:40:00Z",
+        "CGPA": 3
+    },
+    {
+        "id": "0j1k2l3m-0000-1111-2222-333344445555",
+        "name": "Ayesha Noor",
+        "email": "ayesha.noor@gmail.com",
+        "age": 21,
+        "department": "Economics",
+        "created_at_time": "2025-09-11T09:45:00Z",
+        "CGPA": 4
+    },
+    {
+        "name": "Ekrash",
+        "email": "mekrashzahid@gamil.com",
+        "age": 21,
+        "department": "BASE",
+        "CGPA": 4,
+        "id": "9e0f1eb9-7ae4-4dac-8869-8b46a6887a81",
+        "created_at": "2025-09-11T09:04:00.743082"
+    },
+    {
+        "id": "0146b4d3-fd8b-41c5-8386-69e53997a71f",
+        "name": "Zahid",
+        "email": "hel@gmail.com",
+        "age": 10,
+        "department": "se",
+        "created_at": "2025-09-13 05:28:52.720807",
+        "CGPA": 4
+    }
+]
