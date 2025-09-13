@@ -1,8 +1,10 @@
 from fastapi import FastAPI, HTTPException, Path
-from pydantic import BaseModel, EmailStr, Field, field_validator
+from pydantic import BaseModel, EmailStr, Field, field_validator,Query
 from typing import Optional, List, Annotated
 from datetime import datetime
 from uuid import uuid4, UUID
+from statistics import mean
+from collections import Counter
 import json
 
 app = FastAPI(title="Student Management System")
@@ -170,6 +172,31 @@ def filter_students(department: str):
 
     return results
 
+@app.get("/students/sort", response_model=List[Student])
+def sort_students(by: str = "age", order: str = "asc"):
+    if by not in ("age", "name"):
+        raise HTTPException(status_code=400, detail="Sort field must be 'age' or 'name'")
+    if order not in ("asc", "desc"):
+        raise HTTPException(status_code=400, detail="Sort order must be 'asc' or 'desc'")
+
+    data = load_data()
+    reverse = (order == "desc")
+    data.sort(key=lambda s: s[by], reverse=reverse)
+    return data
 
 
+
+@app.get("/students/stats")
+def student_stats():
+    data = load_data()
+    if not data:
+        return {"total": 0, "average_age": None, "count_per_department": {}}
+    total = len(data)
+    avg_age = mean(s["age"] for s in data)
+    dept_counts = Counter(s.get("department", "Unknown") for s in data)
+    return {
+        "total_students": total,
+        "average_age": avg_age,
+        "count_per_department": dept_counts
+    }
       
