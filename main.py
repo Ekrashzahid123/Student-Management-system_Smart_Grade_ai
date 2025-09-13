@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException, Path
-from pydantic import BaseModel, EmailStr, Field, field_validator,Query
+from pydantic import BaseModel, EmailStr, Field, field_validator
 from typing import Optional, List, Annotated
 from datetime import datetime
 from uuid import uuid4, UUID
@@ -136,9 +136,11 @@ def delete_student(student_id:UUID):
         raise HTTPException(status_code=404,detail="student not found")
     save_data(data)
     return {"message":"Student deleted Successfully"}
+
 @app.get("/students",response_model=List[Student])
 def list_students():
     return load_data()
+
 @app.get("/students/search", response_model=List[Student])
 def search_students(name: Optional[str] = None, email: Optional[str] = None):
     data = load_data()
@@ -158,6 +160,7 @@ def search_students(name: Optional[str] = None, email: Optional[str] = None):
             temp.append(stude)
      results = temp
      return results
+    
 @app.get("/student/filter", response_model=List[Student])
 def filter_students(department: str):
     data = load_data()
@@ -183,8 +186,6 @@ def sort_students(by: str = "age", order: str = "asc"):
     reverse = (order == "desc")
     data.sort(key=lambda s: s[by], reverse=reverse)
     return data
-
-
 
 @app.get("/students/stats")
 def student_stats():
